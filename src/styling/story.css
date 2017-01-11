@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara%7CJosefin+Slab%7CMontserrat%7COpen+Sans%7CPacifico%7CLobster%7CArima+Madurai');
+
+.accolade1 {
+    height: 600px
+}
+
+.content1 {
+    height: 300px;
+    vertical-align: middle;
+    background-image: url(../poe.PNG);
+    color: white;
+    display: inline-block;
+    margin-top: 50px
+}
+
+.layer1 {
+    background-color: black;
+    opacity: 0.6;
+    height: 300px;
+    padding: 100px;
+    display: inline-block;
+    position: absolute;
+}
+
+h2, h6 {
+    text-align: center;
+    font-family: "Hind Vadodara";
+    font-weight: bold;
+    opacity: 1
+}
+
+.content2 {
+    width: 50%;
+    height: 150px;
+    margin-top: 60px;
+    margin-left: 40px;
+    float: left
+}
+
+.data {
+    align-content: center
+}
+
+.content3 {
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+    background-image: url('../ville.PNG')
+}
+
+.layer2 {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: inline-block;
+    opacity: 0.6
+}

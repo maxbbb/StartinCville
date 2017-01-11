@@ -223,4 +223,36 @@ var data = {
   }
 }
 
+var VCData = [
+        {
+            key: "CAGR Venture Capital Investment 2010-2015 (%)",
+            values: [
+                {
+                    "label": "Charlottesville, VA",
+                    "value": 156.5
+                },
+                {
+                    "label": "New York, NY",
+                    "value": 31.7
+                },
+                {
+                    "label": "San Francisco, CA",
+                    "value": 29.2
+                },
+                {
+                    "label": "Boston, MA",
+                    "value": 18.7
+                },
+                {
+                    "label": "Washington, DC",
+                    "value": 4.3
+                },
+                {
+                    "label": "US Average",
+                    "value": 20.1
+                }
+            ]
+        }
+]
+
 export default data

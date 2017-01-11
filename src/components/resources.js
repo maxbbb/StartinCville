@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Tab, Tabs} from 'react-bootstrap'
 import Card from './card.js'
-import data from './data.js'
+import data from '../data.js'
 
 class WorkSpace extends Component {
   render() {
@@ -66,7 +66,7 @@ class Hiring extends Component {
 class ResourcesTabs extends Component {
   render() {
     return (
-      <div>
+      <div id="Resources">
         <h1> Looking to start a company? These places can help you out. </h1> 
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Work Space"> <WorkSpace /> </Tab>
