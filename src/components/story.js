@@ -27,8 +27,6 @@ class Story extends Component {
     //     return chart;
     // });
     // <NVD3Chart id="barChart" type="discreteBarChart" datum={VCData} x="label" y="value"/>
-
-
     render() {
         return (
             <div id="Story">
@@ -42,14 +40,13 @@ class Story extends Component {
                         <h5>(US National Venture Capital Association)</h5>
                     </div>
                         <div className="data">
-                             <NVD3Chart id="barChart" type="discreteBarChart" datum={VCData} x="label" y="value"/>
+                             <h5> VC Investment Compound Growth Rate 2010-2015 (%) </h5>
+                             <NVD3Chart id="barChart" showLabels={false} type="discreteBarChart" width={window.innerWidth*0.55} height={window.innerHeight/3} showLegend={false} title='TITLE' datum={VCData} x="label" y="value"/>
                         </div>
                     </div>
                     <div className="content3">
-                        <div className="layer2">
-                        <h2> And we're America's 3rd best city to live in.</h2>
+                        <h3> And we're America's 3rd best city to live in.</h3>
                         <h6>(NY Post)</h6>
-                        </div>
                     </div>
                 </div>
                 );

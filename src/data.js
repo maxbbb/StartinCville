@@ -141,6 +141,12 @@ var data = {
             site: "https://liquidspace.com/US/VA/charlottesville/find-rent-startup-space",
             logo: "https://liquidspacestoragecommon.blob.core.windows.net/content/press/PoweredByLiquidSpace-teal.png",
         },
+        {
+            name: "",
+            oneLiner: "Want to see your business or Resources Listed? Click here to fill out our list request form.",
+            site: "#Story",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSizDKuNwMUbjaDISVEwZYjddGzGE_tZAzwRVpFYnJUIJjrIKkJTw"
+        }
     ],
     Funding: [
         {
@@ -198,7 +204,7 @@ var data = {
             oneLiner: "Woods Rogers helps sort through the strategic options, counseling individuals and companies on the creation and structure of closely held business entities.",
             site: "http://www.woodsrogers.com/practice",
             logo: "http://www.woodsrogers.com/wp-content/uploads/2015/07/WR-Logo-PMS-288C.png"
-        }
+        },
     ],
     Hiring: [
         {
@@ -219,7 +225,7 @@ var data = {
             site: "http://hackcville.com/",
             logo: "http://hackcville.com/wp-content/uploads/2014/09/hackcville-logo1.png"
         },
-    ]
+    ],
   },
   VCData: [{
             key: "CAGR Venture Capital Investment 2010-2015 (%)",
