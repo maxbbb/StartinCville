@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara|Josefin+Slab|Montserrat|Open+Sans');
 
-div {
+.page {
   font-family: "Hind Vadodara";
   width: 100%;
-  height: 700px
 } 

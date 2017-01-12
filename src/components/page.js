@@ -10,7 +10,7 @@ import '../styling/page.css';
 class Page extends Component {
   render() {
     return (
-      <div>
+      <div className="page">
         <Navigation />
         <Player />
         <Story />

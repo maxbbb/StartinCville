@@ -8,7 +8,6 @@ class Card extends Component {
         <a href={this.props.link}>
           <img src={this.props.img}/>
         </a>
-        <h3>{this.props.name}</h3>
         <p>{this.props.description}</p>
       </div>
     )

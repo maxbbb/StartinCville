@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara%7CJosefin+Slab%7CMontserrat%7COpen+Sans%7CPacifico%7CLobster%7CArima+Madurai');
 
 .box {
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
   transition: .2s;
   margin: 20px;
@@ -10,7 +10,8 @@
   height: 190px;
   display: block;
   float: left;
-  font-family: 'Montserrat'
+  font-family: 'Montserrat';
+  color: black;
 }
 
 h1 {
@@ -21,9 +22,9 @@ h3 {
   font-size: 150%
 }
 
-p {
-  font-size: 80%
-
+.box p {
+  font-size: 80%;
+  display: block;
 }
 .box:hover {
   box-shadow: 0 8px 16px 1px rgba(0,0,0,.2);
@@ -32,3 +33,4 @@ p {
 img {
   height: 50px;
 }
+

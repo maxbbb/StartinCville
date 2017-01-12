@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Tab, Tabs} from 'react-bootstrap'
 import Card from './card.js'
 import data from '../data.js'
+import '../styling/resources.css'
 
 class WorkSpace extends Component {
   render() {
@@ -67,7 +68,9 @@ class ResourcesTabs extends Component {
   render() {
     return (
       <div id="Resources">
-        <h1> Looking to start a company? These places can help you out. </h1> 
+        <div className='header'>
+        <h1> Looking to start a company? These places can help you out. </h1>
+        </div> 
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Work Space"> <WorkSpace /> </Tab>
           <Tab eventKey={2} title="Funding"> <Funding /> </Tab>

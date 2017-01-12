@@ -19,6 +19,7 @@ h1 {
     background-color: #FF9100;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: block
 }
 
 h4 {
@@ -28,3 +29,6 @@ h4 {
     font-family: "Montserrat", sans-serif
 }
 
+#player {
+    z-index: -1
+}

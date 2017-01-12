@@ -220,11 +220,8 @@ var data = {
             logo: "http://hackcville.com/wp-content/uploads/2014/09/hackcville-logo1.png"
         },
     ]
-  }
-}
-
-var VCData = [
-        {
+  },
+  VCData: [{
             key: "CAGR Venture Capital Investment 2010-2015 (%)",
             values: [
                 {
@@ -252,7 +249,8 @@ var VCData = [
                     "value": 20.1
                 }
             ]
-        }
-]
+        }]
+}
+
 
 export default data

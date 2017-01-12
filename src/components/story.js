@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import '../styling/story.css';
-import VCData from '../data.js';
+import data from '../data.js';
 import d3 from 'd3';
 import NVD3Chart from 'react-nvd3';
+
+var VCData = data.VCData
 
 class Story extends Component {
 
@@ -32,10 +34,8 @@ class Story extends Component {
             <div id="Story">
                 <div className="accolade1">
                     <div className="content1">
-                        <div className="layer1">
                         <h2> The 4th best city in the US for entrepreneurs!</h2>
                         <h6> Entrepreneur Magazine </h6>
-                        </div>
                     </div>
                     <div className="content2">
                         <h3> Charlottesville is also the fastest growing venture capital ecosystem in the nation.</h3>

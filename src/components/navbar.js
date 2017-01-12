@@ -7,13 +7,24 @@ class Navigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            key: 0
+            key: ""
         }
-        this.handleSelect = this.handleSelect.bind(this)
+        this.handleSelectStory = this.handleSelectStory.bind(this);
+        this.handleSelectCompanies = this.handleSelectCompanies.bind(this);
+        this.handleSelectResources = this.handleSelectResources.bind(this)
     }
 
-    handleSelect(key) {
-        this.setState({ key });
+    handleSelectStory() {
+        this.setState({key: 'Story'});
+        console.log(this.state.key)
+    }
+
+    handleSelectCompanies() {
+        this.setState({key: 'Companies'});
+    }
+
+    handleSelectResources() {
+        this.setState({key: 'Resources'});
     }
     /*
         render() {
@@ -33,9 +44,9 @@ class Navigation extends Component {
         return (
                 <ul>
                     <a href="#Player"><img src={require('../cville.jpg')} /></a>
-                    <li className="active"><a href="#Story">Story</a></li>
-                    <li><a href="#Companies" onClick={this.changeTab} className={(this.state.activeTab === "Companies") ? "active" : ""}>Companies</a></li>
-                    <li><a href="#Resources" onClick={this.changeTab} className={(this.state.activeTab === "Resources") ? "active" : ""}>Resources</a></li>
+                    <li><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></li>
+                    <li><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></li>
+                    <li><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></li>
                 </ul>
         );
     }

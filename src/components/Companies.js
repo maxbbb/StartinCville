@@ -7,11 +7,11 @@ class Company extends Component {
   render() {
     return (
       <div id="Companies">
-        <div clasName='header'>
+        <div className='header'>
           <h1> Looking for somewhere to work? </h1>
-          <h1> Here are some of Charlottesvilles movers and shakers </h1>
+          <h3> Here are some of Charlottesville's movers and shakers </h3>
         </div>
-        <div>
+        <div className="company-cards">
           {data.companies.map(function(i) {
             return (
               <Card link={i.site} img={i.logo} name={i.name} description={i.oneLiner} />
@@ -19,6 +19,7 @@ class Company extends Component {
           })
         }
         </div>
+        <br />
       </div>
     )
   }
