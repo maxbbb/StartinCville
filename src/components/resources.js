@@ -72,7 +72,7 @@ class ResourcesTabs extends Component {
         <h1> Looking to start a company? These places can help you out. </h1>
         </div> 
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-          <Tab eventKey={1} title="Work Space"> <WorkSpace /> </Tab>
+          <Tab eventKey={1} title="Space"> <WorkSpace /> </Tab>
           <Tab eventKey={2} title="Funding"> <Funding /> </Tab>
           <Tab eventKey={3} title="Legal"> <Legal /> </Tab>
           <Tab eventKey={4} title="Hiring"> <Hiring /> </Tab>

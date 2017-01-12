@@ -4,12 +4,12 @@ import '../styling/card.css'
 class Card extends Component {
   render() {
     return (
-      <div className='box'>
-        <a href={this.props.link}>
-          <img src={this.props.img}/>
-        </a>
-        <p>{this.props.description}</p>
-      </div>
+      <a href={this.props.link}>
+        <div className='box'>
+          <img src={this.props.img} />
+          <p>{this.props.description}</p>
+        </div>
+      </a>
     )
   }
 };

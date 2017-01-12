@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styling/navbar.css';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 class Navigation extends Component {
 
@@ -12,19 +12,24 @@ class Navigation extends Component {
         this.handleSelectStory = this.handleSelectStory.bind(this);
         this.handleSelectCompanies = this.handleSelectCompanies.bind(this);
         this.handleSelectResources = this.handleSelectResources.bind(this)
+        this.handleSelect = this.handleSelect.bind(this)
+    }
+
+    handleSelect(eventKey) {
+    event.preventDefault();
     }
 
     handleSelectStory() {
-        this.setState({key: 'Story'});
+        this.setState({ key: 'Story' });
         console.log(this.state.key)
     }
 
     handleSelectCompanies() {
-        this.setState({key: 'Companies'});
+        this.setState({ key: 'Companies' });
     }
 
     handleSelectResources() {
-        this.setState({key: 'Resources'});
+        this.setState({ key: 'Resources' });
     }
     /*
         render() {
@@ -41,14 +46,28 @@ class Navigation extends Component {
         }
     */
     render() {
-        return (
+        if (window.innerWidth > 730) {
+            return (
                 <ul>
                     <a href="#Player"><img src={require('../cville.jpg')} /></a>
                     <li><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></li>
                     <li><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></li>
                     <li><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></li>
                 </ul>
-        );
+            );
+        }
+        if (window.innerWidth < 731) {
+            return (
+                <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
+                    <a href="#Player"><img src={require('../cville.jpg')} /></a>
+                    <NavDropdown eventKey="4" title="Menu" id="nav-dropdown">
+                        <MenuItem eventKey="4.1"><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></MenuItem>
+                        <MenuItem eventKey="4.2"><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></MenuItem>
+                        <MenuItem eventKey="4.3"><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></MenuItem>
+                    </NavDropdown>
+                </Nav>
+            )
+        }
     }
 }
 
