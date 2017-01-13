@@ -12,11 +12,6 @@ class Navigation extends Component {
         this.handleSelectStory = this.handleSelectStory.bind(this);
         this.handleSelectCompanies = this.handleSelectCompanies.bind(this);
         this.handleSelectResources = this.handleSelectResources.bind(this)
-        this.handleSelect = this.handleSelect.bind(this)
-    }
-
-    handleSelect(eventKey) {
-    event.preventDefault();
     }
 
     handleSelectStory() {
@@ -58,9 +53,9 @@ class Navigation extends Component {
         }
         if (window.innerWidth < 731) {
             return (
-                <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
+                <Nav>
                     <a href="#Player"><img src={require('../cville.jpg')} /></a>
-                    <NavDropdown eventKey="4" title="Menu" id="nav-dropdown">
+                    <NavDropdown eventKey="4" title="Menu" id="basic-nav-dropdown">
                         <MenuItem eventKey="4.1"><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></MenuItem>
                         <MenuItem eventKey="4.2"><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></MenuItem>
                         <MenuItem eventKey="4.3"><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></MenuItem>

@@ -28,6 +28,17 @@
   z-index: 1;
   position: relative;
   bottom: 20px;
-  width: 15%;
-  border-radius: 5px
+  width: 20%;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.complete:hover {
+  bottom: 23px;
+  transition: 0.2s
+}
+
+#Companies {
+  text-align: center
 }

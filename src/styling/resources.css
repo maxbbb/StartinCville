@@ -7,6 +7,14 @@
 
 #Resources {
     position: relative;
-    bottom: 60px
+    bottom: 60px;
+    text-align: center
 }
 
+#Resources h1 {
+  margin-bottom: 20px;
+}
+
+.resources {
+  text-align: center
+}

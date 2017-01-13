@@ -54,7 +54,7 @@ li a:hover:not(.active) {
     text-underline-position: none
 }
 
-Nav {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -64,13 +64,14 @@ Nav {
     height: 50px;
     position: fixed;
     box-shadow: 0 4px 8px #888888;
-    z-index: 2
+    z-index: 1
 }
 
-NavDropdown {
-    z-index: 2
+.nav li {
+    z-index: 1;
+    display: block
 }
 
 MenuItem {
-    z-index: 2
+    z-index: 1
 }

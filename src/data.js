@@ -8,7 +8,7 @@ var data = {
     },
     {
         name: "Borrowed & Blue",
-        oneLiner: "Imagine, plan, & book your dream locally inspired wedding. ",
+        oneLiner: "Borrowed & Blue lets you imagine, plan, & book your dream locally inspired wedding. ",
         site: "https://www.borrowedandblue.com",
         logo: "https://pbs.twimg.com/profile_images/491211987146125314/08RTBnBJ.jpeg",
     },
@@ -20,7 +20,7 @@ var data = {
     },
     {
         name: "Contraline",
-        oneLiner: "A non-surgical, reversible alternative to vasectomy.",
+        oneLiner: "Contraline is pioneering a non-surgical, reversible alternative to vasectomy.",
         site: "http://contraline.com/",
         logo: "http://contraline.com/wp-content/uploads/2016/04/Contraline-logo-black.png",
     },
@@ -38,7 +38,7 @@ var data = {
     },
     {
         name: "Center for Open Science",
-        oneLiner: "A non-profit missioned to increase openness, integrity, and reproducibility in the sciences.",
+        oneLiner: "Center for Open Science is a non-profit missioned to increase openness, integrity, and reproducibility in the sciences.",
         site: "https://cos.io/",
         logo: "http://retractionwatch.com/wp-content/uploads/2015/11/cos_logo.png",
     },
@@ -131,7 +131,7 @@ var data = {
         },
         {
             name: "StudioIX",
-            oneLiner: "Co-work for success with open workspace, dedicated desks, and private offices",
+            oneLiner: "StudioIX allows entrepreneurs to co-work for success with open workspace, dedicated desks, and private offices",
             site: "http://www.studioix.co/",
             logo: "http://tomtomfest.com/content/uploads/2015/02/STUDIO-IX-Logo-Black-web.jpg",
         },
@@ -163,7 +163,7 @@ var data = {
         },
         {
             name: "Charlottesville Angel Network",
-            oneLiner: "The Charlottesville Angel Network ('CAN'), founded in 2015, is a group of high-net worth individuals, family offices, and successful entrepreneurs who come together on a monthly basis to evaluate start-up company investment presentations",
+            oneLiner: "The Charlottesville Angel Network is a group of high-net worth individuals, family offices, and successful entrepreneurs who invest in local startups.",
             site: "http://cvilleangelnetwork.net/",
             logo: "http://cvilleangelnetwork.net/images/home/CAN.png",
         },
@@ -195,7 +195,7 @@ var data = {
         },
         {
             name: "UVA Licensing and Ventures Group",
-            oneLiner: "We partner with faculty, entrepreneurs, and investors to bring innovations discovered at UVA into the marketplace",
+            oneLiner: "UVA LVG partners with faculty, entrepreneurs, and investors to bring innovations discovered at UVA into the marketplace",
             site: "http://lvg.virginia.edu/",
             logo: "http://lvg.virginia.edu/assets/site/UVA_LICENSING-VENTURES.png",
         },

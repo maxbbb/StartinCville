@@ -7,7 +7,7 @@ import '../styling/resources.css'
 class WorkSpace extends Component {
   render() {
     return (
-      <div>
+      <div className="resources">
         {data.resources.Workspace.map(function(i) {
           return (
             <Card link={i.site} img={i.logo} name={i.name} description={i.oneLiner} />
@@ -22,7 +22,7 @@ class WorkSpace extends Component {
 class Funding extends Component {
   render() {
     return (
-      <div>
+      <div className="resources">
         {data.resources.Funding.map(function(i) {
           return (
             <Card link={i.site} img={i.logo} name={i.name} description={i.oneLiner} />
@@ -37,7 +37,7 @@ class Funding extends Component {
 class Legal extends Component {
   render() {
     return (
-      <div>
+      <div className="resources">
         {data.resources.Legal.map(function(i) {
           return (
             <Card link={i.site} img={i.logo} name={i.name} description={i.oneLiner} />
@@ -52,7 +52,7 @@ class Legal extends Component {
 class Hiring extends Component {
   render() {
     return (
-      <div>
+      <div className="resources">
         {data.resources.Hiring.map(function(i) {
           return (
             <Card link={i.site} img={i.logo} name={i.name} description={i.oneLiner} />
@@ -69,8 +69,8 @@ class ResourcesTabs extends Component {
     return (
       <div id="Resources">
         <div className='header'>
-        <h1> Looking to start a company? These places can help you out. </h1>
-        </div> 
+        <h1> Looking to start a company? Check out these places. </h1>
+        </div>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Space"> <WorkSpace /> </Tab>
           <Tab eventKey={2} title="Funding"> <Funding /> </Tab>

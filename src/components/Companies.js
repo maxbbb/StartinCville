@@ -32,7 +32,7 @@ class Company extends Component {
             <h1> Looking for somewhere to work? </h1>
             <h3> Here are some of Charlottesvilles movers and shakers </h3>
           </div>
-          <div>
+          <div className="companies">
             {data.companies.map(function (i) {
               if (data.companies.indexOf(i) < 9) {
                 return (
@@ -42,7 +42,7 @@ class Company extends Component {
             })
             }
           </div>
-          <Button className='complete' onClick={this.handleExpand} bsStyle="primary" bsSize="large" > Load More </Button>
+          <Button className='complete' onClick={this.handleExpand} bsStyle="primary" bsSize="large" > MORE </Button>
           <br />
         </div>
       )
@@ -64,7 +64,7 @@ class Company extends Component {
             })
             }
           </div>
-          <Button className='complete' onClick={this.handleContract} bsStyle="primary" bsSize="large" > Load Less </Button>
+          <Button href="#Companies" className='complete' onClick={this.handleContract} bsStyle="primary" bsSize="large" > LESS </Button>
           <br />
         </div>
       )
