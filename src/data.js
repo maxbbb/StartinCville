@@ -50,7 +50,7 @@ var data = {
     },
     {
         name: "Totem",
-        oneLiner: "Totem is a social philanthropy platform that provides users, charities and businesses with an interactive way to raise money and awareness for the causes they care about most.",
+        oneLiner: "Totem is a social philanthropy platform that provides users, charities and businesses with an interactive way to raise money for the causes they care about.",
         site: "http://totemfgf.com/",
         logo: "https://pbs.twimg.com/profile_images/585187928122482689/xDe2TrmW.png",
     },
@@ -232,26 +232,61 @@ var data = {
             values: [
                 {
                     "label": "Charlottesville, VA",
+                    "alt-label": "Cville",
                     "value": 156.5
                 },
                 {
                     "label": "New York, NY",
+                    "alt-label": "NYC",
                     "value": 31.7
                 },
                 {
                     "label": "San Francisco, CA",
+                    "alt-label": "SF",
                     "value": 29.2
                 },
                 {
                     "label": "Boston, MA",
+                    "alt-label": "Boston",
                     "value": 18.7
                 },
                 {
                     "label": "Washington, DC",
+                    "alt-label": "DC",
                     "value": 4.3
                 },
                 {
                     "label": "US Average",
+                    "alt-label": "US",
+                    "value": 20.1
+                }
+            ]
+        }],
+        altVCData: [{
+            key: "CAGR Venture Capital Investment 2010-2015 (%)",
+            values: [
+                {
+                    "label": "Cville",
+                    "value": 156.5
+                },
+                {
+                    "label": "NYC",
+                    "value": 31.7
+                },
+                {
+                    "label": "SF",
+                    "value": 29.2
+                },
+                {
+                    "label": "Boston",
+                    "value": 18.7
+                },
+                {
+                    "label": "DC",
+                    "value": 4.3
+                },
+                {
+                    "label": "US",
                     "value": 20.1
                 }
             ]

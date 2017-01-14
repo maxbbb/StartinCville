@@ -11,13 +11,15 @@
   display: block;
   text-align: center;
   color: white;
-  background-color: #FF9100
+  background-color: #FF9100;
+  padding: 30px
 }
 
 .header h3 {
   display: block;
   text-align: center;
   color: #FF9100;
+  padding-top: 20px;
 }
 
 .company-cards {
@@ -31,7 +33,14 @@
   width: 20%;
   border-radius: 20px;
   margin-top: 30px;
-  margin-bottom: 30px
+  margin-bottom: 70px;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .complete {
+    width: 60%
+  }
 }
 
 .complete:hover {
@@ -39,6 +48,17 @@
   transition: 0.2s
 }
 
+.companies {
+  padding-top: 50px;
+  padding-bottom: 50px
+}
 #Companies {
+  text-align: center
+}
+
+.button-more {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: center
 }

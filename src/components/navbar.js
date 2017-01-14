@@ -1,31 +1,104 @@
 import React, { Component } from 'react';
 import '../styling/navbar.css';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import smoothScroll from 'smoothscroll';
+var icon = require('../menu.png')
+
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//       Navigation.collapseMenu()
+//   }
+// }
 
 class Navigation extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            key: ""
+            key: "",
+            menuShow: false,
         }
         this.handleSelectStory = this.handleSelectStory.bind(this);
         this.handleSelectCompanies = this.handleSelectCompanies.bind(this);
-        this.handleSelectResources = this.handleSelectResources.bind(this)
+        this.handleSelectResources = this.handleSelectResources.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
+        this.menuDisplay = this.menuDisplay.bind(this);
+        this.collapseMenu = this.collapseMenu.bind(this)
     }
 
-    handleSelectStory() {
-        this.setState({ key: 'Story' });
-        console.log(this.state.key)
+    handleSelectStory(event) {
+        event.preventDefault();
+        smoothScroll(document.querySelector('#Story'));
     }
 
     handleSelectCompanies() {
-        this.setState({ key: 'Companies' });
+        event.preventDefault();
+        smoothScroll(document.querySelector('#Companies'));
     }
 
     handleSelectResources() {
-        this.setState({ key: 'Resources' });
+        event.preventDefault();
+        smoothScroll(document.querySelector('#Resources'));
     }
+
+    handleScroll() {
+        var doc = document.documentElement
+        var scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
+        var storyPosition = document.getElementById('Story').offsetTop - 2;
+        var companiesPosition = document.getElementById('Companies').offsetTop - 2;
+        var resourcesPosition = document.getElementById('Resources').offsetTop - 2;
+
+        if (scrollTop > storyPosition && scrollTop < companiesPosition) {
+            this.setState({ key: 'Story' })
+        }
+        if (scrollTop > companiesPosition && scrollTop < resourcesPosition) {
+            this.setState({ key: 'Companies' })
+        }
+        if (scrollTop > resourcesPosition) {
+            this.setState({ key: 'Resources' })
+        };
+    }
+
+    menuDisplay() {
+        console.log(this.state.menuShow)
+        this.setState({ menuShow: (this.state.menuShow === false ? true : false) });
+        console.log(this.state.menuShow)
+    }
+
+    // collapseMenu(event) {
+    //     if (this.state.clickicon === false) {
+    //         if (this.state.menuShow === true) {
+    //             this.setState({ menuShow: false })
+    //         }
+    //      console.log('hey')
+    //     }
+    // }
+
+
+    // componentDidMount() {
+    //     window.addEventListener('scroll', this.handleScroll);
+    //     window.addEventListener('click', this.collapseMenu, false);
+    //     document.getElementById('toggle').addEventListener("click", this.collapseMenu, false)
+    // }
+
+    collapseMenu(bool) {
+        
+            if (this.state.menuShow === true) {
+                this.setState({ menuShow: false })
+            }
+            if (bool === true) {
+                this.setState({menuShow: true})
+            }
+
+         console.log('hey')
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+        // window.addEventListener('click', this.collapseMenu, false);
+        // document.getElementById('toggle').addEventListener("click", this.collapseMenu(true), false)
+    }
+
     /*
         render() {
             return (
@@ -43,24 +116,27 @@ class Navigation extends Component {
     render() {
         if (window.innerWidth > 730) {
             return (
-                <ul>
+                <ul className="Navigation">
                     <a href="#Player"><img src={require('../cville.jpg')} /></a>
-                    <li><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></li>
-                    <li><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></li>
-                    <li><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></li>
+                    <li><a onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></li>
+                    <li><a onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></li>
+                    <li><a onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></li>
                 </ul>
             );
         }
         if (window.innerWidth < 731) {
             return (
-                <Nav>
+                <div className="mobileNav">
                     <a href="#Player"><img src={require('../cville.jpg')} /></a>
-                    <NavDropdown eventKey="4" title="Menu" id="basic-nav-dropdown">
-                        <MenuItem eventKey="4.1"><a href="#Story" onClick={this.handleSelectStory} className={(this.state.key === "Story") ? "active" : ""}>Story</a></MenuItem>
-                        <MenuItem eventKey="4.2"><a href="#Companies" onClick={this.handleSelectCompanies} className={(this.state.key === "Companies") ? "active" : ""}>Companies</a></MenuItem>
-                        <MenuItem eventKey="4.3"><a href="#Resources" onClick={this.handleSelectResources} className={(this.state.key === "Resources") ? "active" : ""}>Resources</a></MenuItem>
-                    </NavDropdown>
-                </Nav>
+                    <div id="toggle" className="dropdown">
+                        <a onClick={this.menuDisplay} className="dropbtn"><img src={icon} /></a>
+                        <div id="myDropdown" className={this.state.menuShow === true ? "show dropdown-content" : "dropdown-content"}>
+                            <a href="#Story" className={(this.state.key === "Story") ? "active" : ""}>Story</a>
+                            <a href="#Companies" className={(this.state.key === "Companies") ? "active" : ""}>Companies</a>
+                            <a href="#Resources" className={(this.state.key === "Resources") ? "active" : ""}>Resources</a>
+                        </div>
+                    </div>
+                </div>
             )
         }
     }
@@ -69,6 +145,8 @@ class Navigation extends Component {
 export default Navigation;
 
 /*
+<a href="#Player"><img src={require('../cville.jpg')} /></a>
+
 const ControlledTabs = React.createClass({
                     getInitialState() {
                 return {

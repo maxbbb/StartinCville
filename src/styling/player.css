@@ -5,7 +5,7 @@ iframe {
     height: 550px;
     padding-top:50px;
     position: relative;
-    top: 14px;
+    top: 0px;
     z-index: 1;
     box-shadow: 0 4px 8px #888888;
 }
@@ -19,14 +19,22 @@ h1 {
     background-color: #FF9100;
     padding-top: 10px;
     padding-bottom: 10px;
-    display: block
+    display: block;
+    padding: 20px
 }
 
 h4 {
     text-align: center;
     width: 100%;
     color: #FF9100;
-    font-family: "Montserrat", sans-serif
+    font-family: "Montserrat", sans-serif;
+    padding: 20px
+}
+
+a:hover {
+     text-decoration:none; 
+     color: #FF9100;
+     cursor:pointer;  
 }
 
 #player {

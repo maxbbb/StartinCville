@@ -23,7 +23,7 @@ class Form extends Component {
       return (
         <div className='form'>
           <h3> Want to see your company or resource listed? Click to fill out our listing request form </h3>
-          <Button className='complete' bsStyle="primary" bsSize="large" onClick={this.openForm}> Form </Button>
+          <Button className='success' bsStyle="primary" bsSize="large" onClick={this.openForm}> FORM </Button>
         </div>
       )
     }
